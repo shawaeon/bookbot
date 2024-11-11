@@ -5,10 +5,13 @@ def main():
     text = get_text(BOOK_PATH)
     w_count = word_count(text)
     c_count = character_count(text)
-    print(f"Word in book: {w_count}\n")
-    print("Characters in book:")
+    print(f"--- Report of {BOOK_PATH} ---\n")
+    print(f"Word in doument: {w_count}\n")
+    print("Characters in doument:")
     for char in c_count:
-        print(f"    {char}: {c_count[char]}")
+        print(f"    Letter '{char}' was found {c_count[char]} times.")
+    print("\n")
+    print("--- End of report --")
 
 def get_text(path):
     with open (path) as f:
